@@ -495,6 +495,147 @@ button {
     opacity: 0.4;
 }
 
+/* =========================================================
+   TAB 6 — ADD THIS UP
+========================================================= */
+
+.addition-box {
+    width: min(650px, 100%);
+    margin: 45px auto 0;
+    padding: 35px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.035);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
+}
+
+.addition-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 105px;
+    margin: 8px 5px;
+    vertical-align: middle;
+}
+
+.addition-number {
+    font-family: Arial, sans-serif;
+    font-size: clamp(30px, 6vw, 46px);
+    font-weight: bold;
+    color: #efbfd2;
+}
+
+.addition-label {
+    margin-top: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.55;
+}
+
+.addition-symbol,
+.addition-equals {
+    display: inline-block;
+    margin: 0 2px;
+    vertical-align: middle;
+    font-size: 28px;
+    opacity: 0.55;
+}
+
+.addition-equals {
+    display: block;
+    margin: 18px 0 0;
+    font-size: 34px;
+}
+
+#calculate-truth {
+    margin-top: 20px;
+}
+
+.truth-result {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    animation: truthReveal 0.8s ease;
+}
+
+@keyframes truthReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.result-label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    margin-bottom: 15px;
+}
+
+.truth-result h3 {
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 15px;
+}
+
+.truth-result p {
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+.final-calculation {
+    margin-top: 22px;
+    font-size: clamp(25px, 6vw, 40px);
+    font-weight: bold;
+    color: #f0b6ce;
+    text-shadow:
+        0 0 8px rgba(255, 180, 215, 0.35),
+        0 0 18px rgba(255, 180, 215, 0.15);
+}
+
+#tab-6-next {
+    margin-top: 30px;
+}
+
+/* =========================================================
+   TAB 7 — EMOTIONAL AND TRUE CALL
+========================================================= */
+
+.maybe-line {
+    text-align: center;
+    font-size: 1.25rem !important;
+    letter-spacing: 3px;
+}
+
+.tab7-ending {
+    margin-top: 45px;
+}
+
+.tab7-ending h3 {
+    color: #f0b6d0;
+    text-shadow:
+        0 0 8px rgba(255, 180, 215, 0.35),
+        0 0 18px rgba(255, 180, 215, 0.18);
+}
+
+.tab7-ending h3 span {
+    filter: drop-shadow(0 0 7px rgba(255, 180, 215, 0.55));
+}
+
+.tab7-final-text {
+    margin-top: 25px;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    opacity: 0.75;
+    text-align: center;
+}
+
 @media (max-width: 600px) {
     .countdown {
         gap: 8px;
@@ -516,5 +657,17 @@ button {
     .heartfelt-text {
         font-size: 0.98rem;
         line-height: 1.8;
+    }
+
+    .addition-box {
+        padding: 25px 12px;
+    }
+
+    .addition-item {
+        min-width: 90px;
+    }
+
+    .addition-symbol {
+        margin: 0;
     }
 }
