@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 September</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         LOCK SCREEN
+    ====================================================== -->
+
+    <section id="lock-screen" class="screen active">
+        <div class="lock-content">
+
+            <div class="lock-icon">🔒</div>
+
+            <div class="small-label">
+                Something is waiting for you
+            </div>
+
+            <h1>NOT YET.</h1>
+
+            <p class="lock-message">
+                This website has decided that patience is
+                important.<br>
+                Come back when the clock says it's time.
+            </p>
+
+            <div class="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>DAYS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>HOURS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
+            </div>
+
+            <p class="lock-warning">
+                Unlocks on 11 September 2026 · 7:00 AM
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
+
+    <section id="login-screen" class="screen">
+        <div class="login-content">
+
+            <div class="lock-icon">🔑</div>
+
+            <div class="small-label">
+                Access granted
+            </div>
+
+            <h1>ONE LAST THING.</h1>
+
+            <p class="login-message">
+                You should probably know what goes here. 👀
+            </p>
+
+            <form id="login-form">
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        autocomplete="off"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="main-button">
+                    ENTER
+                </button>
+
+                <p id="login-error" class="login-error"></p>
+
+            </form>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         MAIN WEBSITE
+    ====================================================== -->
+
+    <main id="birthday-site" class="screen">
+
+        <!-- TAB 1 -->
+        <section id="tab-1" class="tab active">
+            <div class="tab-content">
+
+                <div class="small-label">
+                    01 · Apparently this exists
+                </div>
+
+                <h2>Happy Birthday.</h2>
+
+                <div class="birthday-text">
+
+                    <p>
+                        So... apparently you survived another
+                        year of being you. Honestly, impressive.
+                    </p>
+
+                    <p>
+                        I could write something extremely
+                        sophisticated here, but then it wouldn't
+                        really feel like me. So let's just say
+                        that today is your day, and somehow you
+                        managed to become important enough to
+                        deserve an entire website.
+                    </p>
+
+                    <p>
+                        Please don't let this information get
+                        to your head though. You already have
+                        enough confidence. 😂
+                    </p>
+
+                    <div class="birthday-ending">
+                        <p>Anyway...</p>
+
+                        <h2>
+                            Happy Birthday my one and only<br>
+                            <span>Kaleshi Aurat 🥀</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <button class="next-button" data-next="tab-2">
+                    Continue →
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- TAB 2 -->
+        <section id="tab-2" class="tab">
+            <div class="tab-content">
+
+                <div class="small-label">
+                    02 · Photographic evidence
+                </div>
+
+                <h2>Some memories.</h2>
+
+                <div id="photo-container">
+                    <img id="memory-photo" src="" alt="Memory">
+                </div>
+
+                <p id="photo-caption"></p>
+
+                <button id="next-photo" class="next-button">
+                    Next Photo →
+                </button>
+
+                <div id="video-container" class="hidden">
+
+                    <video id="memory-video" controls playsinline>
+                        <source
+                            id="video-source"
+                            src="assets/video/video.mp4"
+                            type="video/mp4"
+                        >
+                        Your browser does not support video.
+                    </video>
+
+                    <p class="tiny-note">
+                        Yeah, I made you watch this too. 😭
+                    </p>
+
+                    <button id="video-continue" class="next-button">
+                        Continue →
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TAB 3 -->
+        <section id="tab-3" class="tab">
+            <div class="tab-content">
+
+                <div class="small-label">
+                    03 · Extremely serious investigation
+                </div>
+
+                <h2>A few questions.</h2>
+
+                <div class="funny-question" data-question="1">
+
+                    <h3>
+                        Be honest. Are you actually innocent?
+                    </h3>
+
+                    <button class="funny-answer" data-response="yes">
+                        a. Obviously yes 😇
+                    </button>
+
+                    <button class="funny-answer" data-response="no">
+                        b. No 💀
+                    </button>
+
+                    <p class="funny-response"></p>
+
+                    <button class="funny-next hidden">
+                        Next →
+                    </button>
+
+                </div>
+
+                <div class="funny-question hidden" data-question="2">
+
+                    <h3>Who causes more chaos?</h3>
+
+                    <button class="funny-answer">a. Me</button>
+                    <button class="funny-answer">b. You</button>
+
+                    <button class="funny-next hidden">
+                        Next →
+                    </button>
+
+                </div>
+
+                <div class="funny-question hidden" data-question="3">
+
+                    <h3>
+                        If being kaleshi was a profession,
+                        would you be unemployed?
+                    </h3>
+
+                    <button class="funny-answer">a. Yes</button>
+                    <button class="funny-answer">b. Absolutely not</button>
+
+                    <button class="funny-next hidden">
+                        Next →
+                    </button>
+
+                </div>
+
+                <div class="funny-question hidden" data-question="4">
+
+                    <h3>
+                        Final scientific question...
+                        are you happy today?
+                    </h3>
+
+                    <button class="funny-answer">a. Yes ❤️</button>
+                    <button class="funny-answer">b. Maybe</button>
+
+                    <p class="funny-response"></p>
+
+                    <button id="funny-finish" class="next-button hidden">
+                        Continue →
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TAB 4 -->
+        <section id="tab-4" class="tab">
+            <div class="tab-content">
+
+                <div class="small-label">
+                    04 · Now answer properly
+                </div>
+
+                <h2>Two very important questions.</h2>
+
+                <div id="question-1" class="question">
+
+                    <h3>Will You be NH2 without A?</h3>
+
+                    <button
+                        class="answer-button"
+                        data-question="1"
+                        data-answer="Yes"
+                    >
+                        a. Yes
+                    </button>
+
+                    <button
+                        class="answer-button"
+                        data-question="1"
+                        data-answer="No"
+                    >
+                        b. No
+                    </button>
+
+                </div>
+
+                <div id="question-2" class="question hidden">
+
+                    <h3>Choose one of them.</h3>
+
+                    <button
+                        class="answer-button"
+                        data-question="2"
+                        data-answer="Priority"
+                    >
+                        a. Priority
+                    </button>
+
+                    <button
+                        class="answer-button"
+                        data-question="2"
+                        data-answer="Time Pass (option)"
+                    >
+                        b. Time Pass (option)
+                    </button>
+
+                </div>
+
+                <div id="answer-complete" class="hidden">
+
+                    <h3>Noted. 👀</h3>
+
+                    <p>
+                        Your answers have been successfully
+                        recorded... spiritually, for now.
+                    </p>
+
+                    <button id="answers-continue" class="next-button">
+                        Continue →
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TAB 5 -->
+        <section id="tab-5" class="tab">
+
+            <div class="final-page">
+
+                <div class="final-small-title">
+                    05 · One last thing
+                </div>
+
+                <h2 class="final-title">My Words</h2>
+
+                <div class="final-divider">
+                    ♡ ───────── ♡
+                </div>
+
+                <div class="letter-card">
+
+                    <div class="letter-top">
+                        <span>For you</span>
+                        <span>♡</span>
+                    </div>
+
+                    <div class="heartfelt-text">
+
+                        <p>
+                            You know many things i want tell you but i
+                            cant tell them you are important to me
+                            because something inside me says she matters.
+                        </p>
+
+                        <p>
+                            you literally wished me at 12 and until
+                            3-4 days i was thinking you didnt until i
+                            opend my own chat in insta sad but
+                            Thank YOU for motivating me and thinking
+                            about me.
+                        </p>
+
+                        <p>
+                            idk how much you think about me little
+                            nothing or most you can tell me this if
+                            you want but thanks
+                        </p>
+
+                    </div>
+
+                    <div class="letter-ending">
+
+                        <div class="little-heart">♡</div>
+
+                        <p class="birthday-line">
+                            Happy Birthday
+                        </p>
+
+                        <h3>
+                            My Favourite Person
+                            <span>❤️</span>
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="final-note">
+                    That's all. For now. :)
+                </div>
+
+                <button
+                    class="next-button tab5-to-tab6"
+                    data-next="tab-6"
+                >
+                    Wait... There's More 👀
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TAB 6 — LET'S ADD THIS UP
+        ================================================== -->
+
+        <section id="tab-6" class="tab">
+
+            <div class="tab-content">
+
+                <div class="small-label">
+                    06 · Suspicious calculations
+                </div>
+
+                <h2>
+                    Okay... Let's Add This Up 👀
+                </h2>
+
+                <p>
+                    Alright detective, you've made it this far...
+                    <br>
+                    So maybe it's time to calculate the truth. 🧮
+                </p>
+
+                <div class="addition-box">
+
+                    <div class="addition-item">
+                        <span class="addition-number">6</span>
+                        <span class="addition-label">memories</span>
+                    </div>
+
+                    <div class="addition-symbol">+</div>
+
+                    <div class="addition-item">
+                        <span class="addition-number">4</span>
+                        <span class="addition-label">
+                            suspicious compliments
+                        </span>
+                    </div>
+
+                    <div class="addition-symbol">+</div>
+
+                    <div class="addition-item">
+                        <span class="addition-number">∞</span>
+                        <span class="addition-label">
+                            random conversations
+                        </span>
+                    </div>
+
+                    <div class="addition-symbol">+</div>
+
+                    <div class="addition-item">
+                        <span class="addition-number">1</span>
+                        <span class="addition-label">
+                            very special person
+                        </span>
+                    </div>
+
+                    <div class="addition-equals">=</div>
+
+                    <button
+                        id="calculate-truth"
+                        class="main-button"
+                        type="button"
+                    >
+                        Calculate the Truth 👀
+                    </button>
+
+                    <div id="truth-result" class="truth-result hidden">
+
+                        <div class="result-label">
+                            CALCULATION COMPLETE
+                        </div>
+
+                        <h3>
+                            Yeah... this is looking suspicious. 😭
+                        </h3>
+
+                        <p>
+                            After carefully calculating everything...
+                        </p>
+
+                        <div class="final-calculation">
+                            You mean a LOT to me. 💗
+                        </div>
+
+                        <button
+                            id="tab-6-next"
+                            class="next-button"
+                            type="button"
+                        >
+                            Continue → 🥹
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TAB 7 — EMOTIONAL AND TRUE CALL
+        ================================================== -->
+
+        <section id="tab-7" class="tab">
+
+            <div class="final-page">
+
+                <div class="final-small-title">
+                    07 · Emotional and True Call
+                </div>
+
+                <h2 class="final-title">
+                    Emotional and True Call 🥹
+                </h2>
+
+                <div class="final-divider">
+                    ♡ ───────── ♡
+                </div>
+
+                <div class="letter-card">
+
+                    <div class="letter-top">
+                        <span>For you</span>
+                        <span>💗</span>
+                    </div>
+
+                    <div class="heartfelt-text">
+
+                        <p>
+                            Hey Miss,
+                        </p>
+
+                        <p>
+                            You know how I feel about you? I think you do...
+                            but first, I changed the time to
+                            <strong>7:00 AM</strong> because that's your actual
+                            birth time. Hahaha 😂
+                        </p>
+
+                        <p>
+                            Actually, I don't know whether I'll be able to talk
+                            to you on this day or not. Things are a little
+                            uncertain right now, but if I can, I'll definitely try.
+                        </p>
+
+                        <p>
+                            You know what? Somehow, you're the one person who
+                            can make me happy, sad, depressed, confused...
+                            basically every emotion possible. It's like you just
+                            <strong>bomb me with emotions.</strong> 😭
+                        </p>
+
+                        <p>
+                            Whenever things start going happily between us,
+                            somehow you block me, or I block you, or something
+                            else happens. Maybe Bhagwan ji is giving me some
+                            kind of ishara like,
+                            <em>"Parth, distance maintain karo...
+                            tum aise kaise khush reh sakte ho?"</em> 😂
+                        </p>
+
+                        <p>
+                            But whenever I don't get to talk to you, I feel like
+                            I have to study harder and achieve something first.
+                            And weirdly, when everything between us is going well,
+                            I can actually concentrate better.
+                        </p>
+
+                        <p>
+                            Maybe Bhagwan ji wants me to achieve you instead of
+                            simply getting you. Because maybe people don't realize
+                            the value of something when they get it easily...
+                            they realize it when they have to <strong>earn it.</strong>
+                        </p>
+
+                        <p>
+                            So maybe the same applies to you too. Try to achieve me
+                            if you truly want me in your life. Otherwise, maybe
+                            you'll never really understand my presence.
+                        </p>
+
+                        <p>
+                            Maybe you already know what I'm trying to say.
+                        </p>
+
+                        <p class="maybe-line">
+                            <strong>MAYBE!!! 👀</strong>
+                        </p>
+
+                        <p>
+                            But honestly, I'm still not able to properly tell you
+                            or write everything that's in my head.
+                        </p>
+
+                    </div>
+
+                    <div class="letter-ending tab7-ending">
+
+                        <div class="little-heart">
+                            💗✨
+                        </div>
+
+                        <p class="birthday-line">
+                            So I'll just say this...
+                        </p>
+
+                        <h3>
+                            AALU PILU
+                            <span>🥹💖✨</span>
+                        </h3>
+
+                        <p class="tab7-final-text">
+                            You know what it means.
+                            <br><br>
+                            And this time, I'm saying it for real.
+                            <br>
+                            <strong>
+                                Not as a joke. Not in a funny sense. For real.
+                            </strong>
+                            💗✨
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MUSIC -->
+    <audio id="background-music" loop>
+        <source
+            src="assets/music/aankhon-se-batana.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
